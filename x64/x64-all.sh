@@ -25,7 +25,7 @@ PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 
 #PACKAGES="$PACKAGES luci-app-ssr-plus"
-PACKAGES="$PACKAGES luci-app-adguardhome"
+#PACKAGES="$PACKAGES luci-app-adguardhome"
 #PACKAGES="$PACKAGES luci-app-bypass"
 #PACKAGES="$PACKAGES luci-app-poweroff"
 #PACKAGES="$PACKAGES luci-app-lucky"
