@@ -34,9 +34,15 @@ uci set dropbear.@dropbear[0].Interface=''
 uci commit
 
 # 设置编译作者信息
-#FILE_PATH="/etc/openwrt_release"
-#NEW_DESCRIPTION="Compiled by GXNAS"
-#sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
+FILE_PATH="/etc/openwrt_release"
+NEW_DESCRIPTION="Compiled by GXNAS"
+echo "/etc/openwrt_release文件修改前的内容是："
+cat $FILE_PATH
+echo "============================================================"
+sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
+echo "/etc/openwrt_release文件修改后的内容是："
+cat $FILE_PATH
+echo "============================================================"
 
 # 修改主机名字，修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-GXNAS'" package/lean/default-settings/files/zzz-default-settings
@@ -60,8 +66,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/*/Make
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
 # 显示增加编译时间
-sed -i "s/DISTRIB_REVISION='R[0-9]\+\.[0-9]\+\.[0-9]\+'/DISTRIB_REVISION='@R$build_date'/g" package/lean/default-settings/files/zzz-default-settings
-sed -i 's/LEDE/OpenWrt_2410_x64_全功能版 by GXNAS build/g' package/lean/default-settings/files/zzz-default-settings
+sed -i "s/DISTRIB_REVISION='R[0-9]\+\.[0-9]\+\.[0-9]\+'/DISTRIB_REVISION='@R$build_date'/g" /etc/openwrt_release
+sed -i 's/ImmortalWrt/OpenWrt_2410_x64_全功能版 by GXNAS build/g' /etc/openwrt_release
 
 # 修改右下角脚本版本信息
 sed -i 's/<a class=\"luci-link\" href=\"https:\/\/github.com\/openwrt\/luci\" target=\"_blank\">Powered by <%= ver.luciname %> (<%= ver.luciversion %>)<\/a>/OpenWrt_2410_x64_全功能版 by GXNAS build @R'"$build_date"'/' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
