@@ -1,6 +1,6 @@
 #!/bin/bash
 
-build_date=$(TZ=Asia/Shanghai date "+%Y.%m.%d")
+build_date=$(TZ=Asia/Shanghai date "+%Y%m%d%H%M")
 
 echo "编译固件大小为: $PROFILE MB"
 
