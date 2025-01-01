@@ -54,7 +54,7 @@ jobs:
         uses: softprops/action-gh-release@v2.1.0
         with:
           tag_name: OpenWrt-2410-x64-all
-          files: ${{ github.workspace }}/bin/targets/x86/64/*.*
+          files: ${{ github.workspace }}/bin/targets/x86/64/*.uefi.img.gz
           token: ${{ secrets.GH_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
