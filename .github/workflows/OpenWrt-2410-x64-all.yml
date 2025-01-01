@@ -35,7 +35,7 @@ jobs:
               -v "${{ github.workspace }}/x64/x64-all.config:/home/build/immortalwrt/.config" \
               -v "${{ github.workspace }}/x64/x64-all.sh:/home/build/immortalwrt/build.sh" \
               -e PROFILE=$profile \
-              immortalwrt/imagebuilder:x86-64-master /bin/bash /home/build/immortalwrt/build.sh
+              immortalwrt/imagebuilder:x86-64-openwrt-24.10.0-rc3 /bin/bash /home/build/immortalwrt/build.sh
           done
 
 
