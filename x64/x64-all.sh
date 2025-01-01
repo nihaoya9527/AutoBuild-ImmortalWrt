@@ -41,13 +41,13 @@ echo "bin/targets/x86/64/文件夹有："
 ls -lhR bin/targets/x86/64/
 echo "============================================================"
 
-rm -rf immortalwrt-24.10.0-rc3-x86-64-generic-kernel.bin
-rm -rf immortalwrt-24.10.0-rc3-x86-64-generic-rootfs.tar.gz
-rm -rf immortalwrt-24.10.0-rc3-x86-64-generic-squashfs-rootfs.img.gz
-rm -rf immortalwrt-24.10.0-rc3-x86-64-generic.bom.cdx.json
-rm -rf immortalwrt-24.10.0-rc3-x86-64-generic.manifest
-rm -rf profiles.json
-rm -rf sha256sums
+rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-kernel.bin
+rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-rootfs.tar.gz
+rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-squashfs-rootfs.img.gz
+rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic.bom.cdx.json
+rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic.manifest
+rm -rf bin/targets/x86/64/profiles.json
+rm -rf bin/targets/x86/64/sha256sums
 mv bin/targets/x86/64/*uefi.img.gz OpenWrt-2410-x64-all-$build_date-uefi.img.gz
 
 echo "优化后bin/targets/x86/64/文件夹有："
