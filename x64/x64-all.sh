@@ -36,7 +36,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "当前文件夹有："
-ls -Ahl
+ls -lhR
 echo "============================================================"
 
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Build completed successfully."
