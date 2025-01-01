@@ -7,8 +7,6 @@ echo "编译固件大小为: $PROFILE MB"
 # 输出调试信息
 echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始编译..."
 
-
-
 # 定义所需安装的包列表
 PACKAGES=""
 PACKAGES="$PACKAGES curl"
@@ -37,10 +35,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "bin/targets/x86/64/文件夹有："
-ls -lhR bin/targets/x86/64/
-echo "============================================================"
-
 rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-kernel.bin
 rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-rootfs.tar.gz
 rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic-squashfs-rootfs.img.gz
@@ -49,9 +43,5 @@ rm -rf bin/targets/x86/64/immortalwrt-24.10.0-rc3-x86-64-generic.manifest
 rm -rf bin/targets/x86/64/profiles.json
 rm -rf bin/targets/x86/64/sha256sums
 mv bin/targets/x86/64/*efi.img.gz bin/targets/x86/64/OpenWrt-2410-x64-all-$build_date-uefi.img.gz
-
-echo "优化后bin/targets/x86/64/文件夹有："
-ls -lhR bin/targets/x86/64/
-echo "============================================================"
 
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Build completed successfully."
