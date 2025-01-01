@@ -24,10 +24,13 @@ PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 
-PACKAGES="$PACKAGES luci-i18n-ssr-plus-zh-cn"
-PACKAGES="$PACKAGES luci-app-tailscale"
-PACKAGES="$PACKAGES luci-app-daed"
-PACKAGES="$PACKAGES luci-app-store"
+PACKAGES="$PACKAGES luci-app-ssr-plus"
+PACKAGES="$PACKAGES luci-app-adguardhome"
+PACKAGES="$PACKAGES luci-app-bypass"
+PACKAGES="$PACKAGES luci-app-poweroff"
+PACKAGES="$PACKAGES luci-app-lucky"
+PACKAGES="$PACKAGES luci-app-frpc"
+PACKAGES="$PACKAGES luci-app-frps"
 
 # 构建镜像
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Building image with the following packages:"
